@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Che Fa Le — Chef Kosher Privado en Santa Teresa, Costa Rica</title>
+<meta name="description" content="Che Fa Le: chef kosher privado en Santa Teresa, Costa Rica. Servicio completo de comida para familias en villas de lujo — menú diario, cocina en sitio y catering con envío a todo el país.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1b17;
+    --paper:#faf6ee;
+    --paper-dim:#f2ecdf;
+    --herb:#2f4a3d;
+    --herb-light:#43604f;
+    --sand:#b8874a;
+    --line:#ddd4bd;
+    --white:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    line-height:1.08;
+  }
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--herb);
+    font-weight:600;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+  section{position:relative;}
+
+  /* subtle paper texture */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+    opacity:0.035;
+    background-image:radial-gradient(circle at 1px 1px, var(--ink) 1px, transparent 0);
+    background-size:22px 22px;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;
+    z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 40px;
+    mix-blend-mode:normal;
+    transition:background .4s ease, padding .4s ease, box-shadow .4s ease;
+  }
+  header.scrolled{
+    background:rgba(250,246,238,0.88);
+    backdrop-filter:blur(10px);
+    padding:14px 40px;
+    box-shadow:0 1px 0 var(--line);
+  }
+  .nav-mark{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-size:1.05rem;letter-spacing:0.01em;}
+  .nav-mark svg{width:26px;height:26px;flex-shrink:0;}
+  nav ul{display:flex;gap:34px;list-style:none;}
+  nav a{
+    font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;
+    font-weight:500;position:relative;padding-bottom:4px;
+  }
+  nav a::after{
+    content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;
+    background:var(--herb);transform:scaleX(0);transform-origin:left;
+    transition:transform .3s ease;
+  }
+  nav a:hover::after{transform:scaleX(1);}
+  .nav-cta{
+    border:1px solid var(--ink);
+    padding:9px 20px;
+    border-radius:100px;
+    font-size:0.76rem;letter-spacing:0.06em;text-transform:uppercase;font-weight:500;
+    white-space:nowrap;
+    transition:background .25s ease, color .25s ease;
+  }
+  .nav-cta:hover{background:var(--ink);color:var(--paper);}
+  .mobile-toggle{display:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100svh;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:140px 0 80px;
+    position:relative;
+  }
+  .hero .wrap{position:relative;z-index:2;}
+  .hero-content{max-width:100%;}
+  @media (min-width:861px){
+    .hero-content{max-width:66%;}
+  }
+  .hero-top{
+    display:flex;justify-content:center;
+    margin-bottom:32px;
+  }
+  .hero-logo{width:300px;}
+  .hero-loc{
+    text-align:left;
+    font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+    font-size:1.15rem;line-height:1.45;color:var(--herb-light);
+    max-width:380px;
+    margin-bottom:36px;
+  }
+  .hero h1{
+    font-size:clamp(2.2rem, 4.4vw, 3.7rem);
+    max-width:22ch;
+    line-height:1.15;
+    margin-bottom:28px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--herb);
+  }
+  .hero-sub{
+    font-size:1.05rem;
+    max-width:46ch;
+    color:#4b483e;
+    margin-bottom:40px;
+  }
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+  .btn-primary{
+    background:var(--ink);color:var(--paper);
+    padding:16px 32px;border-radius:100px;
+    font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;font-weight:500;
+    display:inline-flex;align-items:center;gap:10px;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .btn-primary:hover{background:var(--herb);transform:translateY(-2px);}
+  .btn-ghost{
+    font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:500;
+    border-bottom:1px solid var(--ink);padding-bottom:3px;
+  }
+  .hero-line{
+    position:absolute;
+    right:-6%;
+    bottom:-4%;
+    width:46%;
+    max-width:520px;
+    opacity:0.9;
+    z-index:1;
+  }
+  @media (max-width:860px){
+    .hero-line{width:70%;right:-18%;bottom:2%;opacity:0.5;}
+  }
+  .hero-photo{
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    width:42%;
+    z-index:0;
+  }
+  .hero-photo video, .hero-photo img{
+    width:100%;height:100%;object-fit:cover;
+    -webkit-mask-image:linear-gradient(to right, transparent, black 18%);
+    mask-image:linear-gradient(to right, transparent, black 18%);
+  }
+  @media (max-width:860px){
+    .hero-photo{display:none;}
+  }
+
+  /* ---------- BEHIND THE SCENES (video) ---------- */
+  .bts{background:var(--ink);color:var(--paper);}
+  .bts .eyebrow{color:var(--sand);}
+  .bts-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  }
+  .bts-grid figure{
+    margin:0;border-radius:16px;overflow:hidden;position:relative;
+    aspect-ratio:9/13;background:#000;
+  }
+  .bts-grid video{width:100%;height:100%;object-fit:cover;display:block;}
+  .bts-grid figcaption{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:14px 16px;
+    background:linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+    font-family:'Fraunces',serif;font-style:italic;font-size:0.92rem;color:var(--paper);
+  }
+  @media (max-width:860px){
+    .bts-grid{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- MARQUEE STRIP ---------- */
+  .strip{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    background:var(--paper-dim);
+    padding:16px 0;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  .strip-track{display:inline-flex;gap:0;animation:scroll 32s linear infinite;}
+  .strip-track span{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+    font-size:1rem;color:var(--herb);
+    padding:0 28px;
+    display:inline-flex;align-items:center;gap:28px;
+  }
+  .strip-track span::after{content:"—";color:var(--sand);font-style:normal;}
+  @keyframes scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+
+  /* ---------- SECTION SHARED ---------- */
+  .section{padding:120px 0;}
+  .section-head{max-width:640px;margin-bottom:64px;}
+  .section-head .eyebrow{margin-bottom:14px;display:block;}
+  .section-head h2{font-size:clamp(2rem,4vw,3rem);}
+  .section-head p{margin-top:18px;color:#4b483e;font-size:1.02rem;max-width:52ch;}
+
+  /* ---------- PHOTO-BACKED SECTIONS ---------- */
+  .photo-bg{
+    position:relative;
+    background-image:var(--bg-img);
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:var(--paper);
+  }
+  .photo-bg::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:var(--bg-tint, linear-gradient(180deg, rgba(28,27,23,.90), rgba(28,27,23,.86)));
+  }
+  .photo-bg > .wrap{position:relative;z-index:1;}
+  .photo-bg .eyebrow{color:var(--sand);}
+  .photo-bg .section-head p{color:#dcd6c8;}
+  @media (max-width:860px){
+    .photo-bg{background-attachment:scroll;}
+  }
+
+  /* ---------- PHOTO-BACKED SECTIONS (light / paper variant) ---------- */
+  .photo-bg-light{
+    position:relative;
+    background-image:var(--bg-img);
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+  }
+  .photo-bg-light::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:linear-gradient(180deg, var(--paper) 0%, rgba(250,246,238,0.90) 18%, rgba(250,246,238,0.90) 82%, var(--paper) 100%);
+  }
+  .photo-bg-light > .wrap{position:relative;z-index:1;}
+  @media (max-width:860px){
+    .photo-bg-light{background-attachment:scroll;}
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about{position:relative;color:var(--paper);overflow:hidden;}
+  .about::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background-image:var(--bg-img);background-size:cover;background-position:center;
+  }
+  .about::after{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:linear-gradient(100deg, rgba(28,27,23,0.94) 40%, rgba(28,27,23,0.75));
+  }
+  .about > .wrap{position:relative;z-index:1;}
+  .about .eyebrow{color:var(--sand);}
+  .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:72px;align-items:start;}
+  .about p{color:#d8d3c4;font-size:1.02rem;margin-bottom:20px;max-width:52ch;}
+  .team-cards{display:flex;flex-direction:column;gap:0;}
+  .team-card{
+    border-top:1px solid rgba(250,246,238,0.18);
+    padding:26px 0;
+    display:flex;justify-content:space-between;align-items:baseline;gap:20px;
+  }
+  .team-card:last-child{border-bottom:1px solid rgba(250,246,238,0.18);}
+  .team-card h3{font-size:1.3rem;font-weight:400;font-style:italic;}
+  .team-card span{font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--sand);text-align:right;}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:48px;}}
+
+  /* ---------- SERVICE (process) ---------- */
+  .service-list{display:flex;flex-direction:column;}
+  .service-item{
+    display:grid;grid-template-columns:100px 1fr;gap:32px;
+    padding:40px 0;
+    border-top:1px solid var(--line);
+    align-items:start;
+  }
+  .service-list .service-item:last-child{border-bottom:1px solid var(--line);}
+  .service-time{
+    font-family:'Fraunces',serif;font-style:italic;font-size:1rem;color:var(--herb);
+    padding-top:4px;
+  }
+  .service-item h3{font-size:1.5rem;margin-bottom:10px;font-weight:500;}
+  .service-item p{color:#4b483e;max-width:56ch;}
+  .service-item .tag{
+    display:inline-block;margin-top:14px;
+    font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--sand);border:1px solid var(--sand);
+    padding:5px 12px;border-radius:100px;
+  }
+  /* service on photo background */
+  .photo-bg .service-item{border-top:1px solid rgba(250,246,238,0.18);}
+  .photo-bg .service-list .service-item:last-child{border-bottom:1px solid rgba(250,246,238,0.18);}
+  .photo-bg .service-time{color:var(--sand);}
+  .photo-bg .service-item h3{color:var(--paper);}
+  .photo-bg .service-item p{color:#dcd6c8;}
+
+  /* ---------- KOSHER ---------- */
+  .kosher{background:var(--paper-dim);}
+  .kosher-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;}
+  .kosher-art{display:flex;justify-content:center;}
+  .kosher-art svg{width:100%;max-width:340px;}
+  .kosher-copy p{color:#4b483e;margin-bottom:18px;max-width:54ch;}
+  .kosher-copy .callout{
+    font-family:'Fraunces',serif;font-style:italic;font-size:1.4rem;
+    color:var(--herb);margin:26px 0;max-width:22ch;line-height:1.35;
+  }
+  @media (max-width:860px){.kosher-grid{grid-template-columns:1fr;}.kosher-art{order:-1;}}
+
+  /* ---------- SERVICES OVERVIEW ---------- */
+  .services-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .service-card{
+    background:var(--paper);
+    padding:40px 30px;
+  }
+  .service-card svg{width:30px;height:30px;color:var(--herb);margin-bottom:22px;display:block;}
+  .service-card h3{font-size:1.1rem;margin-bottom:10px;font-weight:500;}
+  .service-card p{color:#4b483e;font-size:0.92rem;}
+  @media (max-width:960px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:640px){.services-grid{grid-template-columns:1fr;}}
+
+  /* ---------- WHO ITS FOR ---------- */
+  .who-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .who-card{
+    background:var(--paper);
+    padding:44px 36px;
+  }
+  .who-card .num{
+    font-family:'Fraunces',serif;font-style:italic;color:var(--sand);
+    font-size:0.95rem;margin-bottom:20px;display:block;
+  }
+  .who-card h3{font-size:1.2rem;margin-bottom:12px;font-weight:500;}
+  .who-card p{color:#4b483e;font-size:0.95rem;}
+  @media (max-width:860px){.who-grid{grid-template-columns:1fr;}}
+  /* who-grid on photo background: glass cards */
+  .photo-bg .who-grid{background:rgba(250,246,238,0.14);border-color:rgba(250,246,238,0.22);}
+  .photo-bg .who-card{
+    background:rgba(28,27,23,0.55);
+    backdrop-filter:blur(6px);
+  }
+  .photo-bg .who-card h3{color:var(--paper);}
+  .photo-bg .who-card p{color:#dcd6c8;}
+
+  /* ---------- PRICING ---------- */
+  .pricing-section{
+    position:relative;
+    background-image:var(--bg-img);
+    background-size:cover;
+    background-position:center;
+  }
+  .pricing-section::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:linear-gradient(180deg, var(--paper) 0%, rgba(250,246,238,0.88) 22%, rgba(250,246,238,0.88) 78%, var(--paper) 100%);
+  }
+  .pricing-section > .wrap{position:relative;z-index:1;}
+  .pricing-box{
+    border:1px solid var(--ink);
+    border-radius:24px;
+    padding:56px;
+    background:var(--paper);
+    box-shadow:0 24px 60px rgba(28,27,23,0.18);
+    display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;
+  }
+  .pricing-box .factors{display:flex;flex-direction:column;gap:18px;}
+  .factor{display:flex;gap:16px;align-items:flex-start;}
+  .factor svg{width:22px;height:22px;flex-shrink:0;margin-top:2px;}
+  .factor p{font-size:0.98rem;color:#4b483e;}
+  .factor strong{color:var(--ink);font-weight:600;}
+  @media (max-width:860px){.pricing-box{grid-template-columns:1fr;padding:36px;}}
+
+  /* ---------- GALLERY ---------- */
+  .gallery{background:var(--paper-dim);}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows:220px;
+    gap:14px;
+  }
+  .gallery-grid figure{
+    margin:0;position:relative;overflow:hidden;border-radius:14px;
+  }
+  .gallery-grid img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform .5s ease;
+  }
+  .gallery-grid figure:hover img{transform:scale(1.06);}
+  .gallery-grid .tall{grid-row:span 2;}
+  .gallery-grid .wide{grid-column:span 2;}
+  @media (max-width:860px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;}
+    .gallery-grid .wide{grid-column:span 2;}
+    .gallery-grid .tall{grid-row:span 1;}
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact{position:relative;color:var(--paper);overflow:hidden;}
+  .contact::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background-image:var(--bg-img);background-size:cover;background-position:center;
+  }
+  .contact::after{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:linear-gradient(120deg, rgba(47,74,61,0.94), rgba(47,74,61,0.90));
+  }
+  .contact > .wrap{position:relative;z-index:1;}
+  .contact .eyebrow{color:var(--sand);}
+  .contact-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:64px;}
+  .contact h2{font-size:clamp(2.2rem,4.4vw,3.4rem);max-width:14ch;margin-bottom:22px;}
+  .contact p{color:#dce4de;max-width:44ch;margin-bottom:36px;font-size:1.02rem;}
+  .contact-actions{display:flex;flex-direction:column;gap:14px;align-items:flex-start;}
+  .contact-btn{
+    background:var(--paper);color:var(--ink);
+    padding:17px 30px;border-radius:100px;
+    font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:500;
+    display:inline-flex;align-items:center;gap:10px;
+    transition:transform .25s ease;
+  }
+  .contact-btn:hover{transform:translateY(-2px);}
+  .contact-detail{border-top:1px solid rgba(250,246,238,0.22);padding-top:28px;}
+  .contact-detail dl{display:flex;flex-direction:column;gap:22px;}
+  .contact-detail dt{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--sand);margin-bottom:6px;}
+  .contact-detail dd{font-family:'Fraunces',serif;font-size:1.15rem;font-style:italic;}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:44px;}}
+
+  footer{
+    background:var(--ink);color:#a39d8c;
+    padding:28px 0;
+    font-size:0.78rem;
+  }
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  footer span{color:var(--sand);}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  @media (max-width:640px){
+    .wrap{padding:0 22px;}
+    header{padding:18px 22px;}
+    header.scrolled{padding:12px 22px;}
+    nav ul{display:none;}
+    .lang-switch{margin-inline-end:8px;}
+    .lang-btn{padding:5px 8px;font-size:0.65rem;}
+    .nav-cta{padding:8px 14px;font-size:0.68rem;}
+    .hero{padding-top:120px;}
+    .hero-loc{text-align:left;}
+    .hero-logo{width:220px;}
+    .section{padding:80px 0;}
+    .pricing-box{border-radius:18px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+    .strip-track{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- LANGUAGE SWITCHER ---------- */
+  .lang-switch{
+    display:flex;align-items:center;gap:2px;
+    border:1px solid var(--line);
+    border-radius:100px;
+    padding:3px;
+    margin-inline-end:14px;
+  }
+  .lang-btn{
+    font-size:0.7rem;letter-spacing:0.04em;font-weight:600;
+    padding:6px 11px;border-radius:100px;
+    color:#8a8574;
+    transition:background .2s ease, color .2s ease;
+    cursor:pointer;
+  }
+  .lang-btn:hover{color:var(--ink);}
+  .lang-btn.active{background:var(--ink);color:var(--paper);}
+  .header-right{display:flex;align-items:center;}
+
+  /* ---------- HEBREW / RTL SUPPORT ---------- */
+  html[lang="he"] body,
+  html[lang="he"] h1, html[lang="he"] h2, html[lang="he"] h3, html[lang="he"] .display{
+    font-family:'Heebo',sans-serif;
+  }
+  html[lang="he"] h1, html[lang="he"] h2, html[lang="he"] h3{font-weight:600;letter-spacing:0;}
+  html[lang="he"] .eyebrow{letter-spacing:0.04em;}
+  html[lang="he"] nav a,
+  html[lang="he"] .btn-primary,
+  html[lang="he"] .btn-ghost,
+  html[lang="he"] .nav-cta,
+  html[lang="he"] .contact-btn,
+  html[lang="he"] .service-time,
+  html[lang="he"] .tag{
+    letter-spacing:0;text-transform:none;
+  }
+  html[lang="he"] .kosher-copy .callout,
+  html[lang="he"] .service .service em,
+  html[lang="he"] .hero-loc,
+  html[lang="he"] .hero h1 em{font-style:normal;}
+  html[dir="rtl"] .who-card .num{direction:ltr;display:inline-block;}
+  html[lang="he"] .hero-loc{max-width:420px;}
+  html[dir="rtl"] .strip-track{animation-direction:reverse;}
+  html[dir="rtl"] .hero-content{text-align:left;}
+  html[dir="rtl"] .hero-loc,
+  html[dir="rtl"] .hero h1,
+  html[dir="rtl"] .hero-sub{text-align:left;}
+  @media (min-width:861px){
+    html[dir="rtl"] .hero-content{max-width:46%;margin-left:0;margin-right:auto;}
+  }
+  /* ---------- FLOATING WHATSAPP BUTTON ---------- */
+  .whatsapp-float{
+    position:fixed;
+    right:24px;bottom:24px;
+    width:60px;height:60px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(0,0,0,0.25);
+    z-index:200;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .whatsapp-float:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(0,0,0,0.32);}
+  .whatsapp-float svg{width:32px;height:32px;}
+  @media (max-width:640px){
+    .whatsapp-float{right:16px;bottom:16px;width:54px;height:54px;}
+    .whatsapp-float svg{width:28px;height:28px;}
+  }
+  html[dir="rtl"] .whatsapp-float{right:auto;left:24px;}
+  @media (max-width:640px){
+    html[dir="rtl"] .whatsapp-float{left:16px;}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <a href="#top" class="nav-mark">
+    <svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.3"><path d="M4 20c0-5 1-9 1-9s-2-1-2-3.5S4.8 4 6.5 4 9 5.5 9 7c0 1.5-1 2.5-1 2.5s5 1 5 6.5"/></svg>
+    Che&nbsp;Fa&nbsp;Le
+  </a>
+  <nav>
+    <ul>
+      <li><a href="#servicios" data-i18n="nav.servicios">Servicios</a></li>
+      <li><a href="#nosotros" data-i18n="nav.nosotros">Nosotros</a></li>
+      <li><a href="#servicio" data-i18n="nav.servicio">El servicio</a></li>
+      <li><a href="#kosher" data-i18n="nav.kosher">Kosher</a></li>
+      <li><a href="#galeria" data-i18n="nav.galeria">Galería</a></li>
+      <li><a href="#precios" data-i18n="nav.precios">Precios</a></li>
+    </ul>
+  </nav>
+  <div class="header-right">
+    <div class="lang-switch">
+      <span class="lang-btn" data-lang="es">ES</span>
+      <span class="lang-btn" data-lang="en">EN</span>
+      <span class="lang-btn" data-lang="he">HE</span>
+    </div>
+    <a href="#contacto" class="nav-cta" data-i18n="nav.cta">Escribir por WhatsApp</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-content">
+      <div class="hero-top">
+        <img src="assets/logo.png" alt="Che Fa Le — Private Chef" class="hero-logo">
+      </div>
+      <p class="hero-loc" data-i18n="hero.loc">Chef Kosher Privado y<br>Servicio Completo de Comida<br>Santa Teresa, Costa Rica</p>
+      <h1 data-i18n="hero.h1">Disfrute Costa Rica.<br><em>Nosotros</em> nos encargamos de la comida.</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Che Fa Le es un chef privado especializado en cocina kosher para familias que vienen a Santa Teresa de vacaciones. Coordinamos el menú antes de su llegada, cocinamos cada día en su villa, y usted no tiene que comprar, cocinar ni limpiar en todas sus vacaciones.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary">
+          <span data-i18n="hero.cta1">Coordinar mi menú</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#servicio" class="btn-ghost" data-i18n="hero.cta2">Cómo funciona</a>
+      </div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <video autoplay muted loop playsinline poster="assets/videos/hero-flip-poster.jpg">
+        <source src="assets/videos/hero-flip.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="strip">
+    <div class="strip-track">
+      <span data-i18n="strip.1">Cocina kosher especializada</span>
+      <span data-i18n="strip.2">Todo tipo de comida</span>
+      <span data-i18n="strip.3">Desde una comida hasta varios días</span>
+      <span data-i18n="strip.4">Bodas, bar mitzvá y eventos de empresa</span>
+      <span data-i18n="strip.5">Catering con envío a todo Costa Rica</span>
+      <span data-i18n="strip.1">Cocina kosher especializada</span>
+      <span data-i18n="strip.2">Todo tipo de comida</span>
+      <span data-i18n="strip.3">Desde una comida hasta varios días</span>
+      <span data-i18n="strip.4">Bodas, bar mitzvá y eventos de empresa</span>
+      <span data-i18n="strip.5">Catering con envío a todo Costa Rica</span>
+    </div>
+  </div>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="section photo-bg-light" id="servicios" style="padding-top:100px;--bg-img:url('assets/gallery-appetizer-spread.jpg');">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="services.eyebrow">Qué ofrecemos</span>
+        <h2 data-i18n="services.h2">Un mismo equipo, cuatro formas de trabajar con usted.</h2>
+        <p data-i18n="services.p">Desde una sola comida hasta un evento completo — cocina kosher especializada, pero no exclusiva.</p>
+      </div>
+      <div class="services-grid reveal">
+        <div class="service-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+          <h3 data-i18n="services.card1.h3">Chef en su casa</h3>
+          <p data-i18n="services.card1.p">Llegamos a su domicilio y cocinamos ahí, para uno o varios días seguidos, con o sin personal de servicio.</p>
+        </div>
+        <div class="service-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <h3 data-i18n="services.card2.h3">Una sola comida</h3>
+          <p data-i18n="services.card2.p">¿Solo necesita un desayuno, un almuerzo o una cena? También trabajamos por tiempo de comida suelto.</p>
+        </div>
+        <div class="service-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5L12 2z"/></svg>
+          <h3 data-i18n="services.card3.h3">Bodas y eventos</h3>
+          <p data-i18n="services.card3.p">Bodas, bar mitzvá, cumpleaños y eventos de empresa — coordinamos el menú y el servicio para grupos grandes.</p>
+        </div>
+        <div class="service-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+          <h3 data-i18n="services.card4.h3">Catering con envío</h3>
+          <p data-i18n="services.card4.p">Preparamos y enviamos su pedido a cualquier parte de Costa Rica, sin necesidad de que cocinemos en sitio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="nosotros" style="--bg-img:url('assets/gallery-shabbat-table.jpg');">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="reveal">
+          <span class="eyebrow" data-i18n="about.eyebrow">Quiénes somos</span>
+          <h2 style="font-size:clamp(2rem,4vw,3rem);margin:16px 0 28px;max-width:14ch;" data-i18n="about.h2">Una familia con mucho amor a la comida.</h2>
+          <p data-i18n="about.p1">Che Fa Le nació en Santa Teresa de Cóbano de algo simple: cocinamos con mucha pasión, y queríamos que ese cuidado llegara a la mesa de alguien más. Cuando usted viene de vacaciones o vive parte del año aquí, la comida no debería ser una preocupación más.</p>
+          <p data-i18n="about.p2">El servicio lo dan una madre y su hija, quienes cocinan directamente en la casa del cliente. No es catering de bodega ni comida recalentada — es cocina hecha ese mismo día, en su cocina, para su mesa.</p>
+        </div>
+        <div class="reveal">
+          <img src="assets/team-portrait.jpg" alt="Las chefs de Che Fa Le" style="border-radius:18px;width:100%;object-fit:cover;aspect-ratio:4/5;">
+          <div class="team-cards" style="margin-top:0;">
+            <div class="team-card">
+              <h3 data-i18n="about.card1.h3">Chef principal</h3>
+              <span data-i18n="about.card1.span">Cocina del día<br>a día</span>
+            </div>
+            <div class="team-card">
+              <h3 data-i18n="about.card2.h3">Chef & servicio</h3>
+              <span data-i18n="about.card2.span">Menú y logística<br>con el cliente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section class="section photo-bg" id="servicio" style="--bg-img:url('assets/gallery-kneading-dough.jpg');">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="service.eyebrow">Cómo funciona</span>
+        <h2 data-i18n="service.h2">De la puerta de su villa a la mesa.</h2>
+        <p data-i18n="service.p">El mismo formato, ajustado a la cantidad de personas y a los días que necesite el servicio.</p>
+      </div>
+      <div class="service-list">
+        <div class="service-item reveal">
+          <div class="service-time" data-i18n="service.step1.time">Antes de llegar</div>
+          <div>
+            <h3 data-i18n="service.step1.h3">Coordinamos todo con usted</h3>
+            <p data-i18n="service.step1.p">Nos comunicamos con la familia, armamos juntos los menús diarios, y nos informamos de alergias, preferencias y necesidades de los niños. Organizamos todo lo necesario para su estadía antes de que ponga un pie en Costa Rica.</p>
+          </div>
+        </div>
+        <div class="service-item reveal">
+          <div class="service-time" data-i18n="service.step2.time">Cada mañana</div>
+          <div>
+            <h3 data-i18n="service.step2.h3">Llegamos a la villa</h3>
+            <p data-i18n="service.step2.p">Almacenamos y organizamos los alimentos, y preparamos el desayuno, el almuerzo y la cena del día según el menú ya acordado.</p>
+          </div>
+        </div>
+        <div class="service-item reveal">
+          <div class="service-time" data-i18n="service.step3.time">Durante la estadía</div>
+          <div>
+            <h3 data-i18n="service.step3.h3">Sus comidas, listas</h3>
+            <p data-i18n="service.step3.p">Cada comida está lista cuando se necesita. Si lo desea, un camarero sirve y limpia después. La familia no tiene que preocuparse por la comida en ningún momento.</p>
+            <span class="tag" data-i18n="service.step3.tag">Opcional</span>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:56px;font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;color:var(--herb);max-width:26ch;" data-i18n="service.closing">Desde que llega a Santa Teresa, su comida está resuelta.</p>
+    </div>
+  </section>
+
+  <!-- KOSHER -->
+  <section class="section kosher" id="kosher">
+    <div class="wrap">
+      <div class="kosher-grid">
+        <div class="kosher-art reveal">
+          <img src="assets/kosher-mezze.jpg" alt="Mezze kosher preparado por Che Fa Le: hummus, pita, guacamole" style="border-radius:18px;width:100%;object-fit:cover;aspect-ratio:4/5;">
+        </div>
+        <div class="kosher-copy reveal">
+          <span class="eyebrow" data-i18n="kosher.eyebrow">Nuestro enfoque</span>
+          <h2 style="font-size:clamp(2rem,4vw,3rem);margin:16px 0 8px;" data-i18n="kosher.h2">Kosher tradicional, sin perder versatilidad.</h2>
+          <p class="callout" data-i18n="kosher.callout">"No es un requisito que atendemos — es donde ponemos el cuidado más grande."</p>
+          <p data-i18n="kosher.p1">La base de Che Fa Le es la cocina kosher tradicional: sabemos cómo se hace, qué se respeta y qué se evita, y lo aplicamos con la seriedad que merece — trabajamos con proveedores certificados (Chabad Kosher) para los productos que lo requieren.</p>
+          <p data-i18n="kosher.p2">Al mismo tiempo, no cocinamos solo eso. Si su grupo combina invitados con distintas necesidades, o simplemente quiere cocina internacional para algunas comidas, lo adaptamos sin perder el orden ni el cuidado del resto del menú.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section photo-bg" style="--bg-img:url('assets/gallery-party-spread.jpg');">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="who.eyebrow">Para quién es esto</span>
+        <h2 data-i18n="who.h2">Pensado para quien llega a Santa Teresa y no quiere pensar en comida.</h2>
+      </div>
+      <div class="who-grid reveal">
+        <div class="who-card">
+          <span class="num">01</span>
+          <h3 data-i18n="who.card1.h3">Familias en villas de lujo</h3>
+          <p data-i18n="who.card1.p">Que se hospedan de 5 a 14 noches, con niños, y quieren pasar las vacaciones disfrutando — no comprando, cocinando ni limpiando la cocina.</p>
+        </div>
+        <div class="who-card">
+          <span class="num">02</span>
+          <h3 data-i18n="who.card2.h3">Grupos de amigos y parejas</h3>
+          <p data-i18n="who.card2.p">Que viajan juntos a Santa Teresa y prefieren delegar por completo la comida para aprovechar mejor el tiempo del viaje.</p>
+        </div>
+        <div class="who-card">
+          <span class="num">03</span>
+          <h3 data-i18n="who.card3.h3">Viajeros que guardan kosher</h3>
+          <p data-i18n="who.card3.p">Que buscan comidas de Shabat y cocina kosher sin tener que cocinar ellos mismos durante sus vacaciones en Costa Rica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section pricing-section" id="precios" style="--bg-img:url('assets/gallery-tuna-spread.jpg');">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="pricing.eyebrow">Inversión</span>
+        <h2 data-i18n="pricing.h2">El precio depende de su grupo, no de un paquete fijo.</h2>
+        <p data-i18n="pricing.p">No trabajamos con tarifas cerradas porque cada estadía es distinta. Estos son los factores que definen la cotización:</p>
+      </div>
+      <div class="pricing-box reveal">
+        <div class="factors">
+          <div class="factor">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--herb)" stroke-width="1.5"><circle cx="8" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M2 20c0-4 2.5-6.5 6-6.5s6 2.5 6 6.5M14 20c0-3 1.8-5 4.5-5s4.5 2 4.5 5"/></svg>
+            <p data-i18n="pricing.factor1"><strong>Cantidad de personas</strong> — cuántos comensales se van a sentar a la mesa cada día.</p>
+          </div>
+          <div class="factor">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--herb)" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <p data-i18n="pricing.factor2"><strong>Duración del servicio</strong> — un solo evento, unos días, o toda la estadía.</p>
+          </div>
+          <div class="factor">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--herb)" stroke-width="1.5"><path d="M4 4v16M4 4c4 0 4 3 8 3s4-3 8-3M4 12c4 0 4 3 8 3s4-3 8-3"/></svg>
+            <p data-i18n="pricing.factor3"><strong>Personal de servicio</strong> — si desea que también sirvamos y limpiemos, o solo la preparación.</p>
+          </div>
+        </div>
+        <a href="#contacto" class="btn-primary" data-i18n="pricing.cta">Pedir cotización</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VILLA MANAGERS -->
+  <section class="section photo-bg-light" style="padding:64px 0;--bg-img:url('assets/gallery-verrines.jpg');border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+      <div style="max-width:52ch;">
+        <span class="eyebrow" data-i18n="villa.eyebrow">Para administradores de villas</span>
+        <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:1.5rem;margin-top:10px;" data-i18n="villa.h3">¿Administra propiedades o villas de lujo en Santa Teresa?</h3>
+        <p style="color:#4b483e;margin-top:10px;" data-i18n="villa.p">Le recomendamos a sus huéspedes que llegan buscando comida kosher o un chef privado. Escríbanos para coordinar cómo trabajar juntos.</p>
+      </div>
+      <a href="#contacto" class="btn-primary" style="flex-shrink:0;" data-i18n="villa.cta">Hablemos</a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery" id="galeria">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="gallery.eyebrow">Algunos momentos</span>
+        <h2 data-i18n="gallery.h2">Lo que sale de la cocina.</h2>
+        <p data-i18n="gallery.p">Platillos y montajes de servicios recientes en Santa Teresa — cada mesa se arma distinta, según el cliente y la ocasión.</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <figure class="tall"><img src="assets/gallery-dinner-spread.jpg" alt="Mesa de cena con variedad de platillos Che Fa Le"></figure>
+        <figure class="wide"><img src="assets/gallery-tuna-spread.jpg" alt="Atún sellado y variedad de entradas Che Fa Le"></figure>
+        <figure><img src="assets/gallery-steak.jpg" alt="Res en su punto con puré y espárragos"></figure>
+        <figure><img src="assets/gallery-shabbat-table.jpg" alt="Mesa de Shabat preparada por Che Fa Le"></figure>
+        <figure class="wide"><img src="assets/gallery-appetizer-spread.jpg" alt="Tabla de entradas: tostadas, tomate y ensalada"></figure>
+        <figure><img src="assets/gallery-tuna-tataki.jpg" alt="Atún tataki con salsa"></figure>
+        <figure><img src="assets/gallery-croqueta.jpg" alt="Croqueta casera en salsa"></figure>
+        <figure><img src="assets/gallery-green-salad.jpg" alt="Ensalada verde con crocante de parmesano"></figure>
+        <figure><img src="assets/gallery-springroll.jpg" alt="Rollitos crujientes con salsa agridulce"></figure>
+        <figure class="tall"><img src="assets/gallery-party-spread.jpg" alt="Mesa de picoteo para celebración Che Fa Le"></figure>
+        <figure><img src="assets/gallery-pate-olive.jpg" alt="Paté de la casa con tapenade de aceitunas"></figure>
+        <figure><img src="assets/gallery-verrines.jpg" alt="Postres en vasitos individuales"></figure>
+        <figure><img src="assets/gallery-dessert.jpg" alt="Sticky toffee pudding de postre"></figure>
+        <figure><img src="assets/gallery-kneading-dough.jpg" alt="Chef amasando pan a mano"></figure>
+        <figure><img src="assets/gallery-sides-spread.jpg" alt="Variedad de guarniciones preparadas por Che Fa Le"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEHIND THE SCENES -->
+  <section class="section bts">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="bts.eyebrow">Detrás de la cocina</span>
+        <h2 style="color:var(--paper);" data-i18n="bts.h2">Así se prepara cada plato.</h2>
+        <p style="color:#d8d3c4;" data-i18n="bts.p">Un vistazo rápido a la jornada de trabajo: organización, mise en place y la pasión que ponemos en cada plato, en la cocina de la casa del cliente.</p>
+      </div>
+      <div class="bts-grid reveal">
+        <figure>
+          <video autoplay muted loop playsinline poster="assets/videos/bts-wok-poster.jpg">
+            <source src="assets/videos/bts-wok.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="bts.cap1">En el wok</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline poster="assets/videos/bts-springrolls-poster.jpg">
+            <source src="assets/videos/bts-springrolls.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="bts.cap2">Rollitos recién fritos</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline poster="assets/videos/bts-dumplings-poster.jpg">
+            <source src="assets/videos/bts-dumplings.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="bts.cap3">Dumplings al vapor</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline poster="assets/videos/bts-knife-poster.jpg">
+            <source src="assets/videos/bts-knife.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="bts.cap4">Mise en place</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contacto" style="--bg-img:url('assets/gallery-dinner-spread.jpg');">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <span class="eyebrow" data-i18n="contact.eyebrow">Coordinemos su estadía</span>
+          <h2 data-i18n="contact.h2">Cuéntenos sus fechas y cuántos van a la mesa.</h2>
+          <p data-i18n="contact.p">Escríbanos por WhatsApp con sus fechas, el número de personas y sus requisitos, ya sean kosher, alergias o restricciones de menú. Le enviamos una propuesta a la medida antes de que llegue a Costa Rica.</p>
+          <div class="contact-actions">
+            <a href="https://wa.me/50683704514?text=Hola%21%20Me%20gustar%C3%ADa%20cotizar%20el%20servicio%20de%20chef%20privado.%20Aqu%C3%AD%20mis%20datos%3A%0A%0A-%20Fecha%20de%20llegada%3A%0A-%20Fecha%20de%20salida%3A%0A-%20N%C3%BAmero%20de%20personas%3A%0A-%20Edades%20de%20los%20ni%C3%B1os%20%28si%20aplica%29%3A%0A-%20Ubicaci%C3%B3n%20de%20la%20villa%3A%0A-%20Comidas%20por%20d%C3%ADa%3A%0A-%20Requisitos%20kosher%3A%0A-%20Restricciones%20alimentarias%3A%0A-%20Nivel%20de%20servicio%20deseado%3A" class="contact-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.36 5.07L2 22l5.2-1.36a9.9 9.9 0 0 0 4.84 1.24h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Z"/></svg>
+              <span data-i18n="contact.whatsapp">Escribir por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-detail reveal">
+          <dl>
+            <div>
+              <dt data-i18n="contact.dt1">Ubicación</dt>
+              <dd data-i18n="contact.dd1">Santa Teresa de Cóbano,<br>Puntarenas, Costa Rica</dd>
+            </div>
+            <div>
+              <dt data-i18n="contact.dt2">Correo</dt>
+              <dd>nelkinnatali@gmail.com</dd>
+            </div>
+            <div>
+              <dt data-i18n="contact.dt3">Horario de atención</dt>
+              <dd data-i18n="contact.dd3">Todos los días, 8am–8pm</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-i18n="footer.1">Che Fa Le — Private Chef</span>
+    <span data-i18n="footer.2">Santa Teresa de Cóbano, Costa Rica</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/50683704514" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.36 5.07L2 22l5.2-1.36a9.9 9.9 0 0 0 4.84 1.24h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.79 14.15c-.24.68-1.4 1.3-1.93 1.35-.5.05-1.02.24-3.4-.72-2.88-1.15-4.72-4.06-4.86-4.25-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09 1-2.38.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.23.55.77 1.9.84 2.04.07.14.11.3.02.48-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.61-.07.16-.19.68-.79.87-1.06.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.44.2.51.32.07.11.07.66-.17 1.34Z"/></svg>
+</a>
+
+<script>
+const translations = {
+  es: {
+    "nav.servicios":"Servicios","nav.nosotros":"Nosotros","nav.servicio":"El servicio","nav.kosher":"Kosher","nav.galeria":"Galería","nav.precios":"Precios","nav.cta":"Escribir por WhatsApp",
+    "hero.loc":"Chef Kosher Privado y<br>Servicio Completo de Comida<br>Santa Teresa, Costa Rica",
+    "hero.h1":"Disfrute Costa Rica.<br><em>Nosotros</em> nos encargamos de la comida.",
+    "hero.sub":"Che Fa Le es un chef privado especializado en cocina kosher para familias que vienen a Santa Teresa de vacaciones. Coordinamos el menú antes de su llegada, cocinamos cada día en su villa, y usted no tiene que comprar, cocinar ni limpiar en todas sus vacaciones.",
+    "hero.cta1":"Coordinar mi menú","hero.cta2":"Cómo funciona",
+    "strip.1":"Cocina kosher especializada","strip.2":"Todo tipo de comida","strip.3":"Desde una comida hasta varios días","strip.4":"Bodas, bar mitzvá y eventos de empresa","strip.5":"Catering con envío a todo Costa Rica",
+    "services.eyebrow":"Qué ofrecemos","services.h2":"Un mismo equipo, cuatro formas de trabajar con usted.","services.p":"Desde una sola comida hasta un evento completo — cocina kosher especializada, pero no exclusiva.",
+    "services.card1.h3":"Chef en su casa","services.card1.p":"Llegamos a su domicilio y cocinamos ahí, para uno o varios días seguidos, con o sin personal de servicio.",
+    "services.card2.h3":"Una sola comida","services.card2.p":"¿Solo necesita un desayuno, un almuerzo o una cena? También trabajamos por tiempo de comida suelto.",
+    "services.card3.h3":"Bodas y eventos","services.card3.p":"Bodas, bar mitzvá, cumpleaños y eventos de empresa — coordinamos el menú y el servicio para grupos grandes.",
+    "services.card4.h3":"Catering con envío","services.card4.p":"Preparamos y enviamos su pedido a cualquier parte de Costa Rica, sin necesidad de que cocinemos en sitio.",
+    "about.eyebrow":"Quiénes somos","about.h2":"Una familia con mucho amor a la comida.",
+    "about.p1":"Che Fa Le nació en Santa Teresa de Cóbano de algo simple: cocinamos con mucha pasión, y queríamos que ese cuidado llegara a la mesa de alguien más. Cuando usted viene de vacaciones o vive parte del año aquí, la comida no debería ser una preocupación más.",
+    "about.p2":"El servicio lo dan una madre y su hija, quienes cocinan directamente en la casa del cliente. No es catering de bodega ni comida recalentada — es cocina hecha ese mismo día, en su cocina, para su mesa.",
+    "about.card1.h3":"Chef principal","about.card1.span":"Cocina del día<br>a día","about.card2.h3":"Chef & servicio","about.card2.span":"Menú y logística<br>con el cliente",
+    "service.eyebrow":"Cómo funciona","service.h2":"De la puerta de su villa a la mesa.","service.p":"El mismo formato, ajustado a la cantidad de personas y a los días que necesite el servicio.",
+    "service.step1.time":"Antes de llegar","service.step1.h3":"Coordinamos todo con usted","service.step1.p":"Nos comunicamos con la familia, armamos juntos los menús diarios, y nos informamos de alergias, preferencias y necesidades de los niños. Organizamos todo lo necesario para su estadía antes de que ponga un pie en Costa Rica.",
+    "service.step2.time":"Cada mañana","service.step2.h3":"Llegamos a la villa","service.step2.p":"Almacenamos y organizamos los alimentos, y preparamos el desayuno, el almuerzo y la cena del día según el menú ya acordado.",
+    "service.step3.time":"Durante la estadía","service.step3.h3":"Sus comidas, listas","service.step3.p":"Cada comida está lista cuando se necesita. Si lo desea, un camarero sirve y limpia después. La familia no tiene que preocuparse por la comida en ningún momento.","service.step3.tag":"Opcional",
+    "service.closing":"Desde que llega a Santa Teresa, su comida está resuelta.",
+    "kosher.eyebrow":"Nuestro enfoque","kosher.h2":"Kosher tradicional, sin perder versatilidad.",
+    "kosher.callout":"\"No es un requisito que atendemos — es donde ponemos el cuidado más grande.\"",
+    "kosher.p1":"La base de Che Fa Le es la cocina kosher tradicional: sabemos cómo se hace, qué se respeta y qué se evita, y lo aplicamos con la seriedad que merece — trabajamos con proveedores certificados (Chabad Kosher) para los productos que lo requieren.",
+    "kosher.p2":"Al mismo tiempo, no cocinamos solo eso. Si su grupo combina invitados con distintas necesidades, o simplemente quiere cocina internacional para algunas comidas, lo adaptamos sin perder el orden ni el cuidado del resto del menú.",
+    "who.eyebrow":"Para quién es esto","who.h2":"Pensado para quien llega a Santa Teresa y no quiere pensar en comida.",
+    "who.card1.h3":"Familias en villas de lujo","who.card1.p":"Que se hospedan de 5 a 14 noches, con niños, y quieren pasar las vacaciones disfrutando — no comprando, cocinando ni limpiando la cocina.",
+    "who.card2.h3":"Grupos de amigos y parejas","who.card2.p":"Que viajan juntos a Santa Teresa y prefieren delegar por completo la comida para aprovechar mejor el tiempo del viaje.",
+    "who.card3.h3":"Viajeros que guardan kosher","who.card3.p":"Que buscan comidas de Shabat y cocina kosher sin tener que cocinar ellos mismos durante sus vacaciones en Costa Rica.",
+    "pricing.eyebrow":"Inversión","pricing.h2":"El precio depende de su grupo, no de un paquete fijo.","pricing.p":"No trabajamos con tarifas cerradas porque cada estadía es distinta. Estos son los factores que definen la cotización:",
+    "pricing.factor1":"<strong>Cantidad de personas</strong> — cuántos comensales se van a sentar a la mesa cada día.",
+    "pricing.factor2":"<strong>Duración del servicio</strong> — un solo evento, unos días, o toda la estadía.",
+    "pricing.factor3":"<strong>Personal de servicio</strong> — si desea que también sirvamos y limpiemos, o solo la preparación.",
+    "pricing.cta":"Pedir cotización",
+    "villa.eyebrow":"Para administradores de villas","villa.h3":"¿Administra propiedades o villas de lujo en Santa Teresa?","villa.p":"Le recomendamos a sus huéspedes que llegan buscando comida kosher o un chef privado. Escríbanos para coordinar cómo trabajar juntos.","villa.cta":"Hablemos",
+    "gallery.eyebrow":"Algunos momentos","gallery.h2":"Lo que sale de la cocina.","gallery.p":"Platillos y montajes de servicios recientes en Santa Teresa — cada mesa se arma distinta, según el cliente y la ocasión.",
+    "bts.eyebrow":"Detrás de la cocina","bts.h2":"Así se prepara cada plato.","bts.p":"Un vistazo rápido a la jornada de trabajo: organización, mise en place y la pasión que ponemos en cada plato, en la cocina de la casa del cliente.",
+    "bts.cap1":"En el wok","bts.cap2":"Rollitos recién fritos","bts.cap3":"Dumplings al vapor","bts.cap4":"Mise en place",
+    "contact.eyebrow":"Coordinemos su estadía","contact.h2":"Cuéntenos sus fechas y cuántos van a la mesa.","contact.p":"Escríbanos por WhatsApp con sus fechas, el número de personas y sus requisitos, ya sean kosher, alergias o restricciones de menú. Le enviamos una propuesta a la medida antes de que llegue a Costa Rica.",
+    "contact.whatsapp":"Escribir por WhatsApp","contact.dt1":"Ubicación","contact.dd1":"Santa Teresa de Cóbano,<br>Puntarenas, Costa Rica","contact.dt2":"Correo","contact.dt3":"Horario de atención","contact.dd3":"Todos los días, 8am–8pm",
+    "footer.1":"Che Fa Le — Private Chef","footer.2":"Santa Teresa de Cóbano, Costa Rica"
+  },
+  en: {
+    "nav.servicios":"Services","nav.nosotros":"About Us","nav.servicio":"How It Works","nav.kosher":"Kosher","nav.galeria":"Gallery","nav.precios":"Pricing","nav.cta":"Message on WhatsApp",
+    "hero.loc":"Private Kosher Chef &<br>Full Meal Service<br>Santa Teresa, Costa Rica",
+    "hero.h1":"Enjoy Costa Rica.<br><em>We'll</em> take care of the food.",
+    "hero.sub":"Che Fa Le is a private chef specialized in kosher cooking for families visiting Santa Teresa on vacation. We plan the menu before you arrive, cook every day in your villa, and you never have to shop, cook, or clean during your whole trip.",
+    "hero.cta1":"Plan my menu","hero.cta2":"How it works",
+    "strip.1":"Specialized kosher cooking","strip.2":"Any type of cuisine","strip.3":"From one meal to several days","strip.4":"Weddings, bar mitzvahs & corporate events","strip.5":"Catering delivered anywhere in Costa Rica",
+    "services.eyebrow":"What we offer","services.h2":"One team, four ways to work with you.","services.p":"From a single meal to a full event — kosher cooking is our specialty, not our only option.",
+    "services.card1.h3":"Chef in your home","services.card1.p":"We come to your villa and cook there, for one day or several in a row, with or without service staff.",
+    "services.card2.h3":"A single meal","services.card2.p":"Just need breakfast, lunch, or dinner? We also work by single meal.",
+    "services.card3.h3":"Weddings & events","services.card3.p":"Weddings, bar mitzvahs, birthdays, and corporate events — we coordinate the menu and service for large groups.",
+    "services.card4.h3":"Catering with delivery","services.card4.p":"We prepare and deliver your order anywhere in Costa Rica, no on-site cooking required.",
+    "about.eyebrow":"Who we are","about.h2":"A family with a deep love for food.",
+    "about.p1":"Che Fa Le began in Santa Teresa de Cóbano from something simple: we cook with real passion, and we wanted that care to reach someone else's table too. When you come here on vacation, or live here part of the year, food shouldn't be one more thing to worry about.",
+    "about.p2":"The service is provided by a mother and her daughter, who cook directly in the client's home. This isn't warehouse catering or reheated food — it's cooking done that same day, in your kitchen, for your table.",
+    "about.card1.h3":"Head chef","about.card1.span":"Day-to-day<br>cooking","about.card2.h3":"Chef & service","about.card2.span":"Menu & logistics<br>with the client",
+    "service.eyebrow":"How it works","service.h2":"From your villa's door to the table.","service.p":"The same format, adjusted to your group size and how many days you need us.",
+    "service.step1.time":"Before you arrive","service.step1.h3":"We plan everything with you","service.step1.p":"We get in touch with the family, plan the daily menus together, and learn about allergies, preferences, and the children's needs. We organize everything for your stay before you set foot in Costa Rica.",
+    "service.step2.time":"Every morning","service.step2.h3":"We arrive at the villa","service.step2.p":"We store and organize the food, and prepare breakfast, lunch, and dinner according to the agreed menu.",
+    "service.step3.time":"During your stay","service.step3.h3":"Your meals, ready","service.step3.p":"Every meal is ready when you need it. If you'd like, a server can serve and clean up afterward. The family never has to think about food.","service.step3.tag":"Optional",
+    "service.closing":"From the moment you arrive in Santa Teresa, your food is taken care of.",
+    "kosher.eyebrow":"Our approach","kosher.h2":"Traditional kosher, without losing versatility.",
+    "kosher.callout":"\"It's not a requirement we accommodate — it's where we put the most care.\"",
+    "kosher.p1":"Che Fa Le's foundation is traditional kosher cooking: we know how it's done, what's honored, and what's avoided, and we apply it with the seriousness it deserves — we work with certified suppliers (Chabad Kosher) for the products that require it.",
+    "kosher.p2":"At the same time, we don't only cook that. If your group mixes guests with different needs, or you simply want international cuisine for some meals, we adapt without losing the care or consistency of the rest of the menu.",
+    "who.eyebrow":"Who this is for","who.h2":"Built for anyone arriving in Santa Teresa who doesn't want to think about food.",
+    "who.card1.h3":"Families in luxury villas","who.card1.p":"Staying 5 to 14 nights, with children, who want to spend their vacation enjoying it — not shopping, cooking, or cleaning the kitchen.",
+    "who.card2.h3":"Groups of friends & couples","who.card2.p":"Traveling together to Santa Teresa and preferring to hand off food entirely, to make better use of their trip.",
+    "who.card3.h3":"Kosher-observant travelers","who.card3.p":"Looking for Shabbat meals and kosher cooking without having to cook it themselves during their vacation in Costa Rica.",
+    "pricing.eyebrow":"Investment","pricing.h2":"The price depends on your group, not a fixed package.","pricing.p":"We don't work with flat rates because every stay is different. These are the factors that shape your quote:",
+    "pricing.factor1":"<strong>Number of people</strong> — how many guests will sit at the table each day.",
+    "pricing.factor2":"<strong>Length of service</strong> — a single event, a few days, or your whole stay.",
+    "pricing.factor3":"<strong>Service staff</strong> — whether you'd like us to also serve and clean, or just prepare the food.",
+    "pricing.cta":"Request a quote",
+    "villa.eyebrow":"For property managers","villa.h3":"Do you manage luxury villas or properties in Santa Teresa?","villa.p":"We'd love to be recommended to your guests looking for kosher food or a private chef. Reach out to coordinate working together.","villa.cta":"Let's talk",
+    "gallery.eyebrow":"A few moments","gallery.h2":"What comes out of the kitchen.","gallery.p":"Dishes and table settings from recent services in Santa Teresa — every table is set up differently, depending on the client and the occasion.",
+    "bts.eyebrow":"Behind the kitchen","bts.h2":"This is how each dish comes together.","bts.p":"A quick look at the day's work: organization, mise en place, and the passion we put into every dish, in the kitchen of the client's home.",
+    "bts.cap1":"In the wok","bts.cap2":"Freshly fried spring rolls","bts.cap3":"Steamed dumplings","bts.cap4":"Mise en place",
+    "contact.eyebrow":"Let's plan your stay","contact.h2":"Tell us your dates and how many will be at the table.","contact.p":"Message us on WhatsApp with your dates, number of people, and your requirements — whether kosher, allergies, or menu restrictions. We'll send you a tailored proposal before you arrive in Costa Rica.",
+    "contact.whatsapp":"Message on WhatsApp","contact.dt1":"Location","contact.dd1":"Santa Teresa de Cóbano,<br>Puntarenas, Costa Rica","contact.dt2":"Email","contact.dt3":"Hours","contact.dd3":"Every day, 8am–8pm",
+    "footer.1":"Che Fa Le — Private Chef","footer.2":"Santa Teresa de Cóbano, Costa Rica"
+  },
+  he: {
+    "nav.servicios":"שירותים","nav.nosotros":"מי אנחנו","nav.servicio":"איך זה עובד","nav.kosher":"כשרות","nav.galeria":"גלריה","nav.precios":"מחירים","nav.cta":"שליחת הודעה בוואטסאפ",
+    "hero.loc":"שף כשר פרטי ושירות ארוחות מלא<br>סנטה טרסה, קוסטה ריקה",
+    "hero.h1":"תיהנו מקוסטה ריקה.<br><em>אנחנו</em> נדאג לאוכל.",
+    "hero.sub":"שף פרטי המתמחה בבישול כשר, עבור משפחות המגיעות לחופשה בסנטה טרסה. אנחנו בונים איתכם את התפריט לפני ההגעה, מבשלים כל יום בווילה שלכם, ואתם לא צריכים לקנות, לבשל או לנקות לאורך כל החופשה.",
+    "hero.cta1":"תיאום התפריט שלי","hero.cta2":"איך זה עובד",
+    "strip.1":"בישול כשר מקצועי","strip.2":"כל סוגי האוכל","strip.3":"מארוחה בודדת ועד כמה ימים","strip.4":"חתונות, בר מצווה ואירועי חברה","strip.5":"קייטרינג עם משלוח לכל קוסטה ריקה",
+    "services.eyebrow":"מה אנחנו מציעים","services.h2":"אותה משפחה, ארבע דרכים לעבוד יחד.","services.p":"מארוחה בודדת ועד אירוע שלם — בישול כשר הוא ההתמחות שלנו, לא היחיד.",
+    "services.card1.h3":"שף בבית שלכם","services.card1.p":"אנחנו מגיעים לווילה ומבשלים שם, ליום אחד או כמה ימים ברצף, עם או בלי צוות הגשה.",
+    "services.card2.h3":"ארוחה בודדת","services.card2.p":"צריכים רק ארוחת בוקר, צהריים או ערב? אנחנו עובדים גם על בסיס ארוחה בודדת.",
+    "services.card3.h3":"חתונות ואירועים","services.card3.p":"חתונות, בר מצווה, ימי הולדת ואירועי חברה — אנחנו מתאמים את התפריט וההגשה לקבוצות גדולות.",
+    "services.card4.h3":"קייטרינג עם משלוח","services.card4.p":"אנחנו מכינים ושולחים את ההזמנה שלכם לכל מקום בקוסטה ריקה, בלי צורך שנבשל במקום.",
+    "about.eyebrow":"מי אנחנו","about.h2":"משפחה עם אהבה גדולה לאוכל.",
+    "about.p1":"Che Fa Le נולדה בסנטה טרסה דה קובאנו מתוך משהו פשוט: אנחנו מבשלים בהרבה תשוקה, ורצינו שהתשומת הלב הזו תגיע גם לשולחן של מישהו אחר. כשאתם מגיעים לחופשה, או גרים כאן חלק מהשנה, האוכל לא צריך להיות עוד דבר לדאוג לו.",
+    "about.p2":"את השירות נותנות אם ובתה, שמבשלות ישירות בבית הלקוח. זה לא קייטרינג ממחסן ולא אוכל מחומם — זה בישול שנעשה באותו היום, במטבח שלכם, בשביל השולחן שלכם.",
+    "about.card1.h3":"שפית ראשית","about.card1.span":"בישול<br>יום־יומי","about.card2.h3":"שפית ושירות","about.card2.span":"תפריט ולוגיסטיקה<br>מול הלקוח",
+    "service.eyebrow":"איך זה עובד","service.h2":"מדלת הווילה שלכם ועד לשולחן.","service.p":"אותו פורמט, מותאם לגודל הקבוצה ולמספר הימים שתצטרכו את השירות.",
+    "service.step1.time":"לפני ההגעה","service.step1.h3":"מתאמים איתכם הכל","service.step1.p":"אנחנו יוצרים קשר עם המשפחה, בונים יחד את התפריטים היומיים, ומתעדכנים באלרגיות, העדפות וצרכי הילדים. אנחנו מארגנים את כל הדרוש לשהות שלכם עוד לפני שהגעתם לקוסטה ריקה.",
+    "service.step2.time":"כל בוקר","service.step2.h3":"אנחנו מגיעים לווילה","service.step2.p":"אנחנו מאחסנים ומארגנים את המצרכים, ומכינים ארוחת בוקר, צהריים וערב לפי התפריט שכבר סוכם.",
+    "service.step3.time":"לאורך השהות","service.step3.h3":"הארוחות שלכם, מוכנות","service.step3.p":"כל ארוחה מוכנה כשצריך. אם תרצו, מלצר יכול להגיש ולנקות אחר כך. המשפחה לא צריכה לחשוב על אוכל בשום שלב.","service.step3.tag":"אופציונלי",
+    "service.closing":"מהרגע שהגעתם לסנטה טרסה, האוכל שלכם כבר מסודר.",
+    "kosher.eyebrow":"הגישה שלנו","kosher.h2":"כשרות מסורתית, בלי לוותר על גיוון.",
+    "kosher.callout":"\"זו לא דרישה שאנחנו נענים לה — זה המקום שבו אנחנו משקיעים הכי הרבה תשומת לב.\"",
+    "kosher.p1":"הבסיס של Che Fa Le הוא בישול כשר מסורתי: אנחנו יודעים איך עושים את זה נכון, מה מקפידים עליו ומה נמנעים ממנו, ומיישמים זאת ברצינות המתאימה — אנחנו עובדים עם ספקים מוסמכים (Chabad Kosher) עבור המוצרים שדורשים זאת.",
+    "kosher.p2":"יחד עם זאת, אנחנו לא מבשלים רק את זה. אם הקבוצה שלכם משלבת אורחים עם צרכים שונים, או שפשוט תרצו מטבח בינלאומי לחלק מהארוחות, אנחנו מתאימים את עצמנו בלי לוותר על הסדר והקפדה בשאר התפריט.",
+    "who.eyebrow":"למי זה מיועד","who.h2":"בשביל כל מי שמגיע לסנטה טרסה ולא רוצה לחשוב על אוכל.",
+    "who.card1.h3":"משפחות בווילות יוקרה","who.card1.p":"ששוהות בין 5 ל־14 לילות, עם ילדים, ורוצות לבלות את החופשה בהנאה — לא בקניות, בישול או ניקוי מטבח.",
+    "who.card2.h3":"קבוצות חברים וזוגות","who.card2.p":"שנוסעים יחד לסנטה טרסה ומעדיפים להעביר את נושא האוכל לגמרי, כדי לנצל טוב יותר את הטיול.",
+    "who.card3.h3":"מטיילים שומרי כשרות","who.card3.p":"שמחפשים ארוחות שבת ובישול כשר בלי לבשל בעצמם במהלך החופשה בקוסטה ריקה.",
+    "pricing.eyebrow":"השקעה","pricing.h2":"המחיר תלוי בקבוצה שלכם, לא בחבילה קבועה.","pricing.p":"אנחנו לא עובדים לפי תעריפים קבועים, כי כל שהות שונה. אלה הגורמים שקובעים את ההצעה:",
+    "pricing.factor1":"<strong>מספר האנשים</strong> — כמה סועדים יישבו לשולחן בכל יום.",
+    "pricing.factor2":"<strong>משך השירות</strong> — אירוע בודד, כמה ימים, או כל השהות.",
+    "pricing.factor3":"<strong>צוות הגשה</strong> — האם תרצו שגם נגיש וננקה, או רק שנכין את האוכל.",
+    "pricing.cta":"בקשת הצעת מחיר",
+    "villa.eyebrow":"למנהלי ווילות","villa.h3":"מנהלים נכסים או ווילות יוקרה בסנטה טרסה?","villa.p":"נשמח שתמליצו עלינו לאורחים שלכם המחפשים אוכל כשר או שף פרטי. צרו קשר לתיאום שיתוף פעולה.","villa.cta":"בואו נדבר",
+    "gallery.eyebrow":"כמה רגעים","gallery.h2":"מה שיוצא מהמטבח.","gallery.p":"מנות וסידורי שולחן משירותים אחרונים בסנטה טרסה — כל שולחן נבנה אחרת, לפי הלקוח וההזדמנות.",
+    "bts.eyebrow":"מאחורי הקלעים במטבח","bts.h2":"כך כל מנה נוצרת.","bts.p":"הצצה מהירה ליום העבודה: ארגון, הכנת המצרכים (mise en place), והתשוקה שאנחנו משקיעים בכל מנה, במטבח של בית הלקוח.",
+    "bts.cap1":"בווק","bts.cap2":"אגרולים טריים מהמטגנת","bts.cap3":"דמפלינגס באדים","bts.cap4":"הכנת המצרכים",
+    "contact.eyebrow":"בואו נתכנן את השהות שלכם","contact.h2":"ספרו לנו על התאריכים וכמה יהיו סביב השולחן.","contact.p":"כתבו לנו בוואטסאפ עם התאריכים, מספר האנשים והדרישות שלכם — בין אם כשרות, אלרגיות או הגבלות בתפריט. נשלח לכם הצעה מותאמת אישית לפני ההגעה לקוסטה ריקה.",
+    "contact.whatsapp":"שליחת הודעה בוואטסאפ","contact.dt1":"מיקום","contact.dd1":"סנטה טרסה דה קובאנו,<br>פונטארנס, קוסטה ריקה","contact.dt2":"אימייל","contact.dt3":"שעות פעילות","contact.dd3":"כל יום, 8:00–20:00",
+    "footer.1":"Che Fa Le — שף פרטי","footer.2":"סנטה טרסה דה קובאנו, קוסטה ריקה"
+  }
+};
+
+const waMessages = {
+  es: "Hola! Me gustaría cotizar el servicio de chef privado. Aquí mis datos:\n\n- Fecha de llegada:\n- Fecha de salida:\n- Número de personas:\n- Edades de los niños (si aplica):\n- Ubicación de la villa:\n- Comidas por día:\n- Requisitos kosher:\n- Restricciones alimentarias:\n- Nivel de servicio deseado:",
+  en: "Hi! I'd like to get a quote for the private chef service. Here are my details:\n\n- Arrival date:\n- Departure date:\n- Number of people:\n- Children's ages (if any):\n- Villa location:\n- Meals per day:\n- Kosher requirements:\n- Dietary restrictions:\n- Desired service level:",
+  he: "שלום! אשמח לקבל הצעת מחיר לשירות שף פרטי. הנה הפרטים שלי:\n\n- תאריך הגעה:\n- תאריך עזיבה:\n- מספר אנשים:\n- גילאי הילדים (אם רלוונטי):\n- מיקום הווילה:\n- מספר ארוחות ביום:\n- דרישות כשרות:\n- הגבלות תזונתיות:\n- רמת שירות רצויה:"
+};
+
+const waNumber = "50683704514";
+
+function buildWaLink(lang){
+  return "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(waMessages[lang]);
+}
+
+function applyLanguage(lang){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang === 'he') ? 'rtl' : 'ltr';
+  const dict = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) {
+      el.innerHTML = dict[key];
+    }
+  });
+  document.querySelectorAll('.contact-btn, .nav-cta, .whatsapp-float').forEach(el => {
+    el.setAttribute('href', buildWaLink(lang));
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+  try { localStorage.setItem('chefale_lang', lang); } catch(e) {}
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
+});
+
+let initialLang = 'es';
+try {
+  const saved = localStorage.getItem('chefale_lang');
+  if (saved && translations[saved]) initialLang = saved;
+} catch(e) {}
+applyLanguage(initialLang);
+
+</script>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
